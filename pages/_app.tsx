@@ -3,6 +3,8 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
 import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+
 
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
@@ -17,7 +19,7 @@ const colors = {
 
 const theme = extendTheme({
 
-});
+}); 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={activeChain}> 
       <ChakraProvider theme={theme}>
         <Navbar/>
+        <Hero/>
       <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>
