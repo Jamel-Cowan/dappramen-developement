@@ -8,9 +8,10 @@ export default function Buy() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
     const { data, isLoading } = useNFTs(contract);
     return (
-        <Container maxW={"1200px"} p={5}>
-            <Heading>Buy NFTs</Heading>
-            <Text>Browse and buy NFTs from this collection.</Text>
+        
+        <Container maxW={"1600px"} p={5} bg={"brand.black"} pb={"300px"}>
+            <Heading textColor={"brand.white"}>Buy NFTs</Heading>
+            <Text textColor={"brand.white"}>Browse and buy NFTs from this collection.</Text>
             <NFTGrid 
             isLoading={isLoading}
             data={data}

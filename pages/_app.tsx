@@ -3,7 +3,9 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
 import { Navbar } from "../components/Navbar";
+import { myNewTheme } from "../styles/theme";
 import { Hero } from "../components/Hero";
+
 
 
 // This is the chain your dApp will work on.
@@ -14,12 +16,15 @@ import { Hero } from "../components/Hero";
 const activeChain = "mumbai";
 
 const colors = {
+  brand: {  
+    black: "#000000",
+    white: "#ffffff",
+
+  },
 
 };
 
-const theme = extendTheme({
-
-}); 
+const theme = extendTheme({ colors }); 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,9 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
       clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
       activeChain={activeChain}> 
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={myNewTheme}>
         <Navbar/>
-        <Hero/>
       <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>

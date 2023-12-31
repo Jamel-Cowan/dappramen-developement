@@ -14,9 +14,9 @@ export default function Sell() {
     const [selectedNFT, setSelectedNFT] = useState<NFTType>();
 
     return (
-        <Container maxW={"1200px"} p={5}>
-            <Heading>Sell</Heading>
-            <Text>Select which NFT to sell below.</Text>
+        <Container maxW={"1600px"} p={5} bg={"brand.black"} >
+            <Heading textColor={"brand.white"}>Sell</Heading>
+            <Text textColor={"brand.white"}>Select which NFT to sell below.</Text>
             {!selectedNFT ? ( 
                 <NFTGrid
                     data={data}

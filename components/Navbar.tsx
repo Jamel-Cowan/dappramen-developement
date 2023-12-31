@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode, Image } from "@chakra-ui/react";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import NextLink from 'next/link';
 import ThemeToggle from "./ThemeToggle";
@@ -11,11 +11,12 @@ export const Navbar = () => {
 
     
     return (
-        <Box maxW={"1200px"} m={"auto"} py={"10px"} px={"40px"}>
-            <Flex justifyContent={"space-between"} alignItems={"center"}>
+        <Box maxW={"1600px"} m={"auto"} pb={['100px']} pt={'10px'} px={"40px"} bg={"black"} textColor={"white"}>
+            <Flex direction={['column', 'column', 'row']} justifyContent={"space-between"} alignItems={"center"}>
                 <Link as={NextLink} href='/'>
-                    <Heading>Dapp Ramen</Heading>
+                    <Image src="/images/logo.png" alt="Logo" h={"70px"} w={"70px"} />
                 </Link>
+                <input type="text" placeholder="Search any Deal" />
                 <Flex direction={"row"}>
                 <Link as={NextLink} href='/buy' mx={2.5}>
                     <Text>BUY</Text>
@@ -27,12 +28,17 @@ export const Navbar = () => {
                 <Flex direction={"row"} alignItems={"center"}>
                    <ThemeToggle/>
                     </Flex>
+                    <Flex direction={"row"} alignItems={"center"}>
+                    <Link as={NextLink} href='/sellondappramen' mx={2.5}>
+                    <Text>Sell on Dapp Ramen</Text>
+                </Link>
+                </Flex>
                     
                 <Flex dir={"row"} alignItems={"center"}>
                     <ConnectWallet/>
                     {address && (
                         <Link as={NextLink} href={`/profile/${address}`}>
-                            <Avatar src='https://bit.ly/broken-link' ml={"20px"}/>
+                            <Avatar src='https://images.unsplash.com/photo-1594100889583-a421e2b8265c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' ml={"20px"}/>
                         </Link>
                     )}
                 </Flex>

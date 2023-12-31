@@ -1,9 +1,9 @@
 
 import { NextPage } from "next";
-import { Button, Container, Flex, Heading, Stack, } from "@chakra-ui/react";
-import Image from "public/ramen.jpg";
+import { Button, Container, Flex, Heading, Stack, Image } from "@chakra-ui/react";
 import NextLink from 'next/link';
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { Hero } from "../components/Hero";
 
 
 
@@ -11,14 +11,13 @@ const Home: NextPage = () => {
   const address = useAddress();
 
   return (
-        <Container  maxW={"1200px"}>
-      <Flex h={"80vh"} alignItems={"center"} justifyContent={"center"}>
-        <Stack spacing={4} align={"center"} >
-         <Heading></Heading>
-          <Button as={NextLink} href='/buy'>
-          Shop Lifetime Dapps
-          </Button>
-        </Stack>
+        <Container  
+        maxW={"1600px"} 
+        padding={"0 auto"} 
+        bg={"brand.black"}
+        >
+      <Flex  h={"80vh"} alignItems={"center"} justifyContent={"center"}>
+      <Hero/>
       </Flex>
     </Container> 
   );
