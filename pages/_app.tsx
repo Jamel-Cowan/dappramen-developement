@@ -4,8 +4,7 @@ import "../styles/globals.css";
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
 import { Navbar } from "../components/Navbar";
 import { myNewTheme } from "../styles/theme";
-import { Hero } from "../components/Hero";
-
+import { Analytics } from '@vercel/analytics/react';
 
 
 // This is the chain your dApp will work on.
@@ -35,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ChakraProvider theme={myNewTheme}>
         <Navbar/>
       <Component {...pageProps} />
+      <Analytics />
       </ChakraProvider>
     </ThirdwebProvider>
   );

@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "@thirdweb-dev/react": "^4",
     "@thirdweb-dev/sdk": "^4",
+    "@vercel/analytics": "^1.1.1",
     "ethers": "^5",
     "framer-motion": "^10.16.16",
     "next": "^13",

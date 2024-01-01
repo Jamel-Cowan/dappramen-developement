@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode, Image } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode, Image, Input } from "@chakra-ui/react";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import NextLink from 'next/link';
 import ThemeToggle from "./ThemeToggle";
@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 export const Navbar = () => {
     const address = useAddress();
     const { toggleColorMode } = useColorMode();
-    const bgColor = { light: "gray.200", dark: "black.700" };
+    const bgColor = { light: "white", dark: "black.700" };
     const color = { light: "black", dark: "white" };
 
     
@@ -16,7 +16,8 @@ export const Navbar = () => {
                 <Link as={NextLink} href='/'>
                     <Image src="/images/logo.png" alt="Logo" h={"70px"} w={"70px"} />
                 </Link>
-                <input type="text" placeholder="Search any Deal" />
+                <Input type="search" placeholder="Search any Deal" maxW={"400px"}/>
+
                 <Flex direction={"row"}>
                 <Link as={NextLink} href='/buy' mx={2.5}>
                     <Text>BUY</Text>
