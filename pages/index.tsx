@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <Container  
         maxW={"1600px"} 
         padding={"0 auto"} 
-        bg={"brand.black"}
+        bg="rgba(255, 255, 255, 0)"
         >
       <Flex  h={"80vh"} alignItems={"center"} justifyContent={"center"}>
       <Hero/>

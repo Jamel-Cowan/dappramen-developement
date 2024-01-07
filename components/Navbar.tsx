@@ -11,14 +11,14 @@ export const Navbar = () => {
 
     
     return (
-        <Box maxW={"1600px"} m={"auto"} pb={['100px']} pt={'10px'} px={"40px"} bg={"black"} textColor={"white"}>
+        <Box maxW={"1600px"} pb={['50px']} pt={'10px'} px={"40px"} bg={"brand.black"} textColor={"white"} boxShadow={"md"}>
             <Flex direction={['column', 'column', 'row']} justifyContent={"space-between"} alignItems={"center"}>
                 <Link as={NextLink} href='/'>
                     <Image src="/images/logo.png" alt="Logo" h={"70px"} w={"70px"} />
                 </Link>
                 <Input type="search" placeholder="Search any Deal" maxW={"400px"}/>
 
-                <Flex direction={"row"}>
+                <Flex direction={['column', 'column', 'row']}>
                 <Link as={NextLink} href='/buy' mx={2.5}>
                     <Text>BUY</Text>
                 </Link>
@@ -35,7 +35,7 @@ export const Navbar = () => {
                 </Link>
                 </Flex>
                     
-                <Flex dir={"row"} alignItems={"center"}>
+                <Flex direction={['column', 'column', 'column']} alignItems={"center"}>
                     <ConnectWallet/>
                     {address && (
                         <Link as={NextLink} href={`/profile/${address}`}>
