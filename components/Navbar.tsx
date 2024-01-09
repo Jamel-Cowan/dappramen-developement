@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode, Image, Input } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Heading, Link, Text, useColorMode, Image, Input, } from "@chakra-ui/react";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import NextLink from 'next/link';
 import ThemeToggle from "./ThemeToggle";
@@ -11,7 +11,7 @@ export const Navbar = () => {
 
     
     return (
-        <Box maxW={"1600px"} pb={['50px']} pt={'10px'} px={"40px"} bg={"brand.black"} textColor={"white"} boxShadow={"md"}>
+        <Box maxW={"1600px"} pb={['50px']} pt={'10px'} px={"40px"} bg="rgba(0, 0, 0, 0.4)" textColor={"white"} boxShadow={"md"}>
             <Flex direction={['column', 'column', 'row']} justifyContent={"space-between"} alignItems={"center"}>
                 <Link as={NextLink} href='/'>
                     <Image src="/images/logo.png" alt="Logo" h={"70px"} w={"70px"} />

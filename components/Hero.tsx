@@ -31,7 +31,7 @@ export const Hero = ( ) => {
                     textAlign="center"
                     padding="0 1rem"
                     margin="0 auto"
-                    maxW="1200px"
+                    maxW="100%"
                     >
                         
                     <Heading
